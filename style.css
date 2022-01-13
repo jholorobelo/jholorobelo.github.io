@@ -1,0 +1,16 @@
+html, body {
+  margin: 0;
+  paddin  
+}
+canvas {
+  display: block;
+}
+
+
+
+#canvasDiv{
+ display: block;
+  margin-left: 200px;
+  margin-right: 500%;
+  
+}
