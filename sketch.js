@@ -1,9 +1,9 @@
 
 let video;
-let label = "checking..";
+let label = "checking....";
 let classifier;
 let modelURL = 'https://teachablemachine.withgoogle.com/models/wYPw7LJI_/';
-
+var capture;
 var constraints = {
   video: {
     
