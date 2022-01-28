@@ -1,8 +1,14 @@
 
 let video;
-let label = "checking...";
+let label = "checking..";
 let classifier;
 let modelURL = 'https://teachablemachine.withgoogle.com/models/wYPw7LJI_/';
+
+var constraints = {
+  video: {
+    
+    facingMode: 'environment'  
+  }};
 
 // STEP 1: Load the model!
 function preload() {
@@ -14,7 +20,7 @@ function setup() {
   var canvas = createCanvas(500, 400);
   canvas.parent('canvasDiv');
   // Create the video
-  video = createCapture(VIDEO);
+  video = createCapture(constraints);
   video.hide();
 
   // STEP 2: Start classifying
