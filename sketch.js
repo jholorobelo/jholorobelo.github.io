@@ -1,8 +1,8 @@
 
 let video;
-let label = "";
+let label = "checking...";
 let classifier;
-let modelURL = 'https://teachablemachine.withgoogle.com/models/cI2e_V_Vv/';
+let modelURL = 'https://teachablemachine.withgoogle.com/models/wYPw7LJI_/';
 
 // STEP 1: Load the model!
 function preload() {
