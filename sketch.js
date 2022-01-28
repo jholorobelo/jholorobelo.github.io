@@ -1,36 +1,18 @@
-let video;
-let label = "checking";
-let classifier;
-let modelURL = 'https://teachablemachine.withgoogle.com/models/wYPw7LJI_/';
 
-var capture;
-let switchFlag = false;
-let switchBtn;
-  let flippedVideo;
-var hello = {
-     video: {
-        
-         facingMode: {
-          exact: "environment"
-        }
-     }
-   };
+let video;
+let label = "";
+let classifier;
+let modelURL = 'https://teachablemachine.withgoogle.com/models/cI2e_V_Vv/';
+
 // STEP 1: Load the model!
 function preload() {
-  classifier = ml5.imageClassifier(modelURL+ 'model.json');
+  classifier = ml5.imageClassifier(modelURL + 'model.json');
 }
 
 function setup() {
   // size of vid
   var canvas = createCanvas(500, 400);
   canvas.parent('canvasDiv');
-  
-
- var switchBtn = createButton('Switch Camera');
-  switchBtn.parent('SwitchButton');
- //switchBtn.position(905, 800);
- switchBtn.mousePressed(switchCamera);
-  
   // Create the video
   video = createCapture(VIDEO);
   video.hide();
@@ -55,7 +37,6 @@ function draw() {
   fill(255);
   text(label, width / 2, height - 16);
 
- 
 }
 // STEP 3: Get the classification!
 function gotResults(error, results) {
@@ -67,45 +48,4 @@ function gotResults(error, results) {
   // Storing the label and classifying again!
   label = results[0].label;
   classifyVideo();
-}
-function switchCamera()
-{
-  switchFlag = !switchFlag;
-  stopCapture();
-  if(switchFlag==true)
-  {
-   video.remove();
-   hello = {
-     video: {
-         facingMode: {
-          exact: "environment"
-        }
-     }
-   };
-
-  }
-  else
-  {
-   video.remove();
-   hello = {
-     video: {
-         facingMode: {
-          exact: "user"
-        }
-     }
-   };
-  }
-  video = createCapture(hello);
-  video.hide();
-}
-
-function stopCapture() {
-  let stream = video.elt.srcObject;
-  let tracks = stream.getTracks();
-
-  tracks.forEach(function(track) {
-    track.stop();
-  });
-
- video.elt.srcObject = null;
 }
