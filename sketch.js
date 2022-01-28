@@ -1,17 +1,19 @@
 let video;
 let label = "checking";
-let classifier;
-let modelURL = 'https://teachablemachine.withgoogle.com/models/wYPw7LJI_/';
+let classifier;https://teachablemachine.withgoogle.com/models/wYPw7LJI_/';
 
 var capture;
 let switchFlag = false;
 let switchBtn;
   let flippedVideo;
- var constraints = {
-  video: {
-    
-    facingMode: 'environment'  
-  }};
+var hello = {
+     video: {
+        
+         facingMode: {
+          exact: "environment"
+        }
+     }
+   };
 // STEP 1: Load the model!
 function preload() {
   classifier = ml5.imageClassifier(modelURL+ 'model.json');
@@ -23,13 +25,13 @@ function setup() {
   canvas.parent('canvasDiv');
   
 
- /*var switchBtn = createButton('Switch Camera');
+ var switchBtn = createButton('Switch Camera');
   switchBtn.parent('SwitchButton');
  //switchBtn.position(905, 800);
- switchBtn.mousePressed(switchCamera);*/
+ switchBtn.mousePressed(switchCamera);
   
   // Create the video
-  video = createCapture(constraints);
+  video = createCapture(VIDEO);
   video.hide();
 
   // STEP 2: Start classifying
@@ -65,7 +67,7 @@ function gotResults(error, results) {
   label = results[0].label;
   classifyVideo();
 }
-/*function switchCamera()
+function switchCamera()
 {
   switchFlag = !switchFlag;
   stopCapture();
@@ -105,4 +107,4 @@ function stopCapture() {
   });
 
  video.elt.srcObject = null;
-}*/
+}
