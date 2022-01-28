@@ -1,6 +1,7 @@
 let video;
 let label = "checking";
-let classifier;https://teachablemachine.withgoogle.com/models/wYPw7LJI_/';
+let classifier;
+let modelURL = 'https://teachablemachine.withgoogle.com/models/wYPw7LJI_/';
 
 var capture;
 let switchFlag = false;
