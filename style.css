@@ -1,0 +1,116 @@
+	* {box-sizing: border-box;}
+body {font-family: Verdana, sans-serif;}
+.mySlides {display: none;}
+img {vertical-align: middle;}
+
+html, body {
+  margin: 0;
+  paddin  
+}
+canvas {
+  display: block;
+}
+
+@import url('https://fonts.googleapis.com/css?family=Roboto:700&display=swap');
+*{
+  padding: 0;
+  margin: 0;
+}
+.wrapper{
+  background: url(bg3.jpg) no-repeat;
+  background-size: cover;
+  height: 100vh;
+}
+
+.topnav {
+  overflow: hidden;
+  background-color: #333;
+}
+
+.navbar{
+  position: fixed;
+  height: 80px;
+  width: 100%;
+  top: 0;
+  left: 0;
+  background: rgba(121,75,82,0.7);
+}
+.navbar .logo{
+  width: 100px;
+  height: top;
+  padding: 20px 100px;
+  
+
+}
+
+.wrapper .center{
+  position: absolute;
+  left: 50%;
+  top: 55%;
+  transform: translate(-50%, -50%);
+  font-family: sans-serif;
+  user-select: none;
+}
+.center h1{
+  color: blanchedalmond;
+  font-size: 70px;
+  width: 900px;
+  font-weight: bold;
+  text-align: center;
+
+  text-shadow: -2px -2px #000,
+                 2px -2px #000,
+                 -2px 2px #000,
+                 2px 2px #000;  
+}
+
+.active {
+    text-shadow: -1px -1px #000,
+                 1px -1px #000,
+                 -1px 1px #000,
+                 1px 1px #000;  
+}
+/*para to sa bold nung text sa navbar (predict & range) */
+
+
+#canvasDiv{
+ display: block;
+  margin-left: 200px;
+  margin-right: 500%;
+  
+}
+
+
+table, th, td {
+  border:1px solid black;
+  text-align: center;
+  border-spacing: 0;
+   padding: 0.3em;
+   color: black;
+}
+
+
+#SwitchButton{
+ margin: 0;
+  position: absolute;
+  top: 110%;
+  left: 50%;
+  -ms-transform: translate(-50%, -50%);
+  transform: translate(-50%, -50%);
+}
+#navbar {overflow: hidden; background-color: #cc3300;} /* background color ng navbar */
+    #navbar a {float: left; display: block; color: #f2f2f2; text-align: center; padding: 14px 16px; text-decoration: none; font-size: 20px;}
+    #navbar a:hover{background-color: white; color: black;}
+    #navbar a:active{background-color: white; color: white;}
+    .content {padding: 16px; font-size: 20px;}
+    .sticky{position: fixed; top: 0; width: 100%;}
+    .sticky + .content{padding-top: 60px;}
+
+
+
+
+
+
+
+
+
